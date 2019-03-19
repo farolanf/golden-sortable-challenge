@@ -1,0 +1,29 @@
+{
+  "name": "golden-sortable-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farolanf/golden-sortable-challenge.git"
+  },
+  "author": "Farolan Faisal <farolanfaisal@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farolanf/golden-sortable-challenge/issues"
+  },
+  "homepage": "https://github.com/farolanf/golden-sortable-challenge#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "engines": {
+    "node": "^10.14.0"
+  }
+}

@@ -64,6 +64,10 @@ const App = () => {
   const handlePasteSampleCSV = () => {
     setData(sampleCSV)
   }
+
+  const handleClear = () => {
+    setData('')
+  }
   
   return (
     <div className='uk-container'>
@@ -113,9 +117,13 @@ const App = () => {
           <button className='uk-button uk-button-default ml-1' type='button' onClick={handlePasteSampleCSV}>
             Paste sample CSV
           </button>
+          <button className='uk-button uk-button-default ml-1' type='button' onClick={handleClear}>
+            Clear
+          </button>
         </div>
 
         <h3>Sortable List</h3>
+        <p><span className='uk-label'>Info</span> Make sure delimiter and quote options are correct or the list will show incorrect data.</p>
         <Table list={list} />
 
         <h3>Raw List</h3>

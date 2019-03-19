@@ -1,0 +1,8 @@
+th:hover .sort-icons {
+  visibility: visible;
+}
+
+.sort-icons {
+  display: inline-block;
+  width: 24px;
+}

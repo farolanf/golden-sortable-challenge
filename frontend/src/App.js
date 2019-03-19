@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import csvjson from 'csvjson'
-import _ from 'lodash'
 import { isCSV } from './utils'
+
+import Table from './Table'
 
 // eslint-disable-next-line
 import sampleCSV from '!raw-loader!./data/sample.csv'
 import sampleJSON from './data/sample.json'
 
 const App = () => {
-  const [data, setData] = useState('')
+  const [data, setData] = useState(sampleCSV)
   const [list, setList] = useState([])
   const [delimiter, setDelimiter] = useState('tab')
   const [quote, setQuote] = useState('double')
@@ -112,7 +113,10 @@ const App = () => {
           </button>
         </div>
 
-        <h3>List</h3>
+        <h3>Sortable List</h3>
+        <Table list={list} />
+
+        <h3>Raw List</h3>
         <pre>{JSON.stringify(list, null, 2)}</pre>
       </article>
     </div>

@@ -9,7 +9,7 @@ import sampleCSV from '!raw-loader!./data/sample.csv'
 import sampleJSON from './data/sample.json'
 
 const App = () => {
-  const [data, setData] = useState(sampleCSV)
+  const [data, setData] = useState()
   const [list, setList] = useState([])
   const [delimiter, setDelimiter] = useState('tab')
   const [quote, setQuote] = useState('double')
@@ -20,6 +20,8 @@ const App = () => {
     if (data) {
       const list = parseData(data)
       setList(list || [])
+    } else {
+      setList([])
     }
   }, [data])
 
